@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>ファーストページ</h1>
     <div id="canvas"></div>
   </div>
 </template>
@@ -21,8 +20,6 @@ export default {
     onMounted(() => {
       P5.value = new p5(p5Setup);
     });
-
-
 
     return {
       P5

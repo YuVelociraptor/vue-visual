@@ -27,6 +27,17 @@
     >
       <q-list>
         <q-item-label header>Essential Links</q-item-label>
+
+        <q-item clickable tag="a" href="/01">
+          <q-item-section avatar>
+            <q-icon name="school" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>01</q-item-label>
+            <q-item-label>01</q-item-label>
+          </q-item-section>
+        </q-item>
+
         <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
           <q-item-section avatar>
             <q-icon name="school" />
