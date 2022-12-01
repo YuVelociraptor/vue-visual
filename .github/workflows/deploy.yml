@@ -1,0 +1,36 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Deploy
+
+on:
+  push:
+    branches: [ "production" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Read .tool-versions
+      uses: marocchino/tool-versions-action@v1
+      id: asdf
+
+    - name: Use Node.js ${{ steps.asdf.outputs.nodejs }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ steps.asdf.outputs.nodejs }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+
+    - name: Deploy
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      run: |
+        aws s3 cp --recursive --region ap-northeast-1 dist $AWS_S3_BUCKET
