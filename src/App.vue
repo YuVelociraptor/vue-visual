@@ -12,10 +12,9 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Visualisation with p5.js on Vue.js
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -27,6 +26,16 @@
     >
       <q-list>
         <q-item-label header>Essential Links</q-item-label>
+
+        <q-item clickable tag="a" href="/">
+          <q-item-section avatar>
+            <q-icon name="home" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Home</q-item-label>
+            <q-item-label>/</q-item-label>
+          </q-item-section>
+        </q-item>
 
         <q-item clickable tag="a" href="/01">
           <q-item-section avatar>
