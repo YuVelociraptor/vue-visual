@@ -37,13 +37,13 @@
           </q-item-section>
         </q-item>
 
-        <q-item clickable tag="a" href="/01">
+        <q-item clickable tag="a" href="/c60">
           <q-item-section avatar>
             <q-icon name="school" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>01</q-item-label>
-            <q-item-label>01</q-item-label>
+            <q-item-label>C60</q-item-label>
+            <q-item-label>Fullerene C60</q-item-label>
           </q-item-section>
         </q-item>
 
