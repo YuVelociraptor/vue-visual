@@ -8,7 +8,7 @@
 
 import { onMounted, ref } from 'vue';
 import p5 from 'p5';
-import { p5Setup } from '../p5/First';
+import { p5Setup } from '../p5/c60';
 
 
 export default {
