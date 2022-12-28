@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>HOME</h1>
+    <router-link to="c60">C60 Fullerene</router-link>
   </div>
 </template>
