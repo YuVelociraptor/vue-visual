@@ -47,6 +47,16 @@
           </q-item-section>
         </q-item>
 
+        <q-item clickable tag="a" href="/gol">
+          <q-item-section avatar>
+            <q-icon name="school" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Game of Life</q-item-label>
+            <q-item-label>Conway's Game of Life</q-item-label>
+          </q-item-section>
+        </q-item>
+
 
 
       </q-list>
