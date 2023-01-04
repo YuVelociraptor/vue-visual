@@ -1,5 +1,8 @@
 <template>
   <div>
+
+    <button v-on:click="startP5">Start</button>
+
     <div id="canvas"></div>
   </div>
 </template>

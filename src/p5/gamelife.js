@@ -1,3 +1,6 @@
+let playFlag = false;
+let i = 0;
+
 const p5Setup = function (p5){
 
     p5.setup = () => {
@@ -14,7 +17,19 @@ const p5Setup = function (p5){
 
     p5.draw = () => {
 
+        if(playFlag){
+
+            i++;
+        }
+
+        p5.background(255, 255, p5.sin(p5.radians(i * 10)));
     }
 }
 
-export {p5Setup};
+const startP5 = () => {
+
+    console.log("startP5");
+    playFlag = !playFlag;
+}
+
+export {p5Setup, startP5};
