@@ -8,8 +8,6 @@ const p5Setup = function (p5){
         const canvas = p5.createCanvas(500, 500);
         canvas.parent('canvas');
 
-        p5.background(255, 255, 200);
-
         p5.smooth();
 
         p5.frameRate(60);
@@ -19,16 +17,15 @@ const p5Setup = function (p5){
 
         if(playFlag){
 
-            i++;
+            i = i + 1;
         }
 
-        p5.background(255, 255, p5.sin(p5.radians(i * 10)));
+        p5.background(255 * p5.sin(p5.radians(i * 2 + 240)), 255 * p5.sin(p5.radians(i * 3 + 120)), 255 * p5.sin(p5.radians(i)));
     }
 }
 
 const startP5 = () => {
 
-    console.log("startP5");
     playFlag = !playFlag;
 }
 
