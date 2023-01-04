@@ -20,7 +20,7 @@ const p5Setup = function (p5){
             i = i + 1;
         }
 
-        p5.background(255 * p5.sin(p5.radians(i * 2 + 240)), 255 * p5.sin(p5.radians(i * 3 + 120)), 255 * p5.sin(p5.radians(i)));
+        p5.background(255 * p5.abs(p5.sin(p5.radians(i * 0.7))), 255 * p5.abs(p5.sin(p5.radians(i * 1.1))), 255 * p5.abs(p5.sin(p5.radians(i * 1.3))));
     }
 }
 
