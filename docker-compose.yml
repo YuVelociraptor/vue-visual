@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nginx_http:
+    image: nginx
+    container_name: vue-visual
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    ports:
+      - "2991:80"
+    tty: true
