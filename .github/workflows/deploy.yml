@@ -6,6 +6,7 @@ name: Deploy
 on:
   push:
     branches: [ "production" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,6 +15,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - shell: bash
+      run: |
+        touch .env
+        echo "${{ secrets.PROD_ENV }}" >> .env
 
     - name: Read .tool-versions
       uses: marocchino/tool-versions-action@v1
