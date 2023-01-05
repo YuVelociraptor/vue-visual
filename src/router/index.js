@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/components/HomePage.vue'
-import FirstPage from '@/components/FirstPage.vue'
-import SecondPage from '@/components/SecondPage.vue'
+import C60 from '@/components/C60Fullerene.vue'
+import GameOfLife from '@/components/GemeOfLife.vue'
 
 const routes = [
     {
@@ -10,14 +10,14 @@ const routes = [
         component: HomePage
     },
     {
-        path: '/01',
-        name: 'First',
-        component: FirstPage
+        path: '/c60',
+        name: 'C60',
+        component: C60
     },
     {
-        path: '/02',
-        name: 'Second',
-        component: SecondPage
+        path: '/gol',
+        name: 'Game Of Life',
+        component: GameOfLife
     }
 ]
 
