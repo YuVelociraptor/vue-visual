@@ -5,6 +5,7 @@ services:
     container_name: vue-visual
     volumes:
       - ./dist:/usr/share/nginx/html:ro
+      - ./conf.d:/etc/nginx/conf.d:ro
     ports:
       - "2991:80"
     tty: true
